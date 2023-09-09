@@ -27,7 +27,7 @@ struct AssignmentsMenu: View {
         
         Form {
             ForEach(courses) { course in
-                Section(header: Text(course.name ?? "Unknown Course")) {
+                Section(header: Text(course.name ?? "Unnamed Course")) {
                     List {
                         ForEach(assignments) { assignment in
                             NavigationLink(destination: MainMenu()) {  //TODO: Change destination

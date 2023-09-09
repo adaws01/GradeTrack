@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Assignment" representedClassName=".Assignment" syncable="YES">
+        <attribute name="dueDate" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="DateComponents"/>
+        <attribute name="gradeType" attributeType="String" valueTransformerName="" defaultValueString="ungraded" customClassName="GradeType"/>
+        <attribute name="mark" attributeType="Transformable" valueTransformerName="" customClassName="Mark"/>
+        <attribute name="name" attributeType="String"/>
+    </entity>
+    <entity name="Breakdown" representedClassName=".Breakdown" syncable="YES">
+        <attribute name="components" optional="YES" attributeType="Transformable" customClassName="[CourseComponent]"/>
+    </entity>
+    <entity name="Course" representedClassName=".Course" syncable="YES">
+        <attribute name="assignments" attributeType="Transformable" customClassName="[Assignment]"/>
+        <attribute name="breakdown" optional="YES" attributeType="Transformable" customClassName="Breakdown"/>
+        <attribute name="grade" optional="YES" attributeType="Transformable" customClassName="Grade"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="CourseComponent" representedClassName=".CourseComponent" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pointValue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Grade" representedClassName=".Grade" syncable="YES">
+        <attribute name="attemptedPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="earnedPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Mark" representedClassName=".Mark" syncable="YES">
+        <attribute name="earnedPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="totalPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+</model>
